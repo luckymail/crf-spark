@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a4a8da1-fa18-4876-8364-1b72a3d300dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml_bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/test.data2_bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/train.data2_bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crf.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/zhuanzhuan/nlp/CRFFromRawFile.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/zhuanzhuan/nlp/CRFFromRawFile.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/com/zhuanzhuan/nlp/CRFFromRawFileTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/zhuanzhuan/nlp/CRFFromRawFileTest.scala" afterDir="false" />
-    </list>
+    <list default="true" id="2a4a8da1-fa18-4876-8364-1b72a3d300dc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +33,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/train.data2_bak">
+        <entry file="file://$PROJECT_DIR$/data/train.data2">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/data/test.data2_bak">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/data/test.data2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="24" column="129" lean-forward="true" selection-start-line="24" selection-start-column="129" selection-end-line="24" selection-end-column="129" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -100,7 +96,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -122,84 +118,7 @@
             <path>
               <item name="crf" type="b2602c69:ProjectViewProjectNode" />
               <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="nlp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="chunking" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="chunking" type="462c0819:PsiDirectoryNode" />
-              <item name="raw" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="nlp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crf-spark" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -286,12 +205,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555594669606" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555644974191" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../knowledge-extractor-develop_camcorder" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\workspace\scala\crf-spark" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\workspace\scala\crf-spark\src\data" />
       <recent name="D:\work\workspace\scala\crf-spark" />
     </key>
   </component>
@@ -603,11 +526,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/train.data2_bak">
+    <entry file="file://$PROJECT_DIR$/data/train.data2">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test.data2_bak">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/data/test.data2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="129" lean-forward="true" selection-start-line="24" selection-start-column="129" selection-end-line="24" selection-end-column="129" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
