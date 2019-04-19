@@ -25,34 +25,53 @@ object CRFFromRawFileTest {
 
   def main(args: Array[String]) {
     val templateFile = "src/test/resources/chunking/template"
+    val trainFile = "D:\\work\\结构化\\train\\玩具乐器_train.txt"
+    val testFile = "D:\\work\\结构化\\train\\玩具乐器_test.txt"
+/*
     val trainFile = "src/test/resources/chunking/raw/train.data"
     val testFile = "src/test/resources/chunking/raw/test.data"
+*/
 
     val conf = new SparkConf().setAppName("").setMaster("local[2]")
     val sc = new SparkContext(conf)
 
     val templates: Array[String] = scala.io.Source.fromFile(templateFile).getLines().filter(_.nonEmpty).toArray
     val trainRDD: RDD[Sequence] = sc.textFile(trainFile).filter(_.nonEmpty).map(sentence => {
-      val tokens = sentence.split("\t")
+      val tokens = sentence.split("\n")
+//      val tokens = sentence.split("\t")
       Sequence(tokens.map(token => {
-        val tags: Array[String] = token.split('|')
+        val tags: Array[String] = token.split('\t')
+//        val tags: Array[String] = token.split('|')
         Token.put(tags.last, tags.dropRight(1))
       }))
     })
 
     val model: CRFModel = CRF.train(templates, trainRDD, 0.25, 2)
 
+    // 保存模型参数
+    model
+
+
     val testRDDWithoutLabel: RDD[Sequence] = sc.textFile(testFile).filter(_.nonEmpty).map(sentence => {
-      val tokens = sentence.split("\t")
+      val tokens = sentence.split("\n")
+//      val tokens = sentence.split("\t")
       Sequence(tokens.map(token => {
-        val tags = token.split('|')
+        val tags = token.split('\t')
+//        val tags = token.split('|')
         Token.put(tags.dropRight(1))
       }))
     })
 
+//    trainRDD.repartition(1)
+//    testRDDWithoutLabel
+    trainRDD.take(10).foreach(println)
+    testRDDWithoutLabel.take(10).foreach(println)
+
+
+/*
     trainRDD.repartition(1).saveAsTextFile("target/result/train.data")
     testRDDWithoutLabel.saveAsTextFile("target/result/test.data")
-
+*/
     val testRDDwithLabel: RDD[Sequence] = sc.textFile(testFile).filter(_.nonEmpty).map(sentence => {
       val tokens = sentence.split("\t")
       Sequence(tokens.map(token => {

@@ -32,8 +32,10 @@ object CRFFromRawFile {
 
     val templates: Array[String] = scala.io.Source.fromFile(templateFile).getLines().filter(_.nonEmpty).toArray
     val trainRDD: RDD[Sequence] = sc.textFile(trainFile).filter(_.nonEmpty).map(sentence => {
+//      val tokens = sentence.split("\n")
       val tokens = sentence.split("\t")
       Sequence(tokens.map(token => {
+//        val tags: Array[String] = token.split('\t')
         val tags: Array[String] = token.split('|')
         Token.put(tags.last, tags.dropRight(1))
       }))
@@ -41,18 +43,24 @@ object CRFFromRawFile {
 
     val model: CRFModel = CRF.train(templates, trainRDD, 0.25, 2)
 
+    // 保存模型
+
     val testRDDWithoutLabel: RDD[Sequence] = sc.textFile(testFile).filter(_.nonEmpty).map(sentence => {
+//      val tokens = sentence.split("\n")
       val tokens = sentence.split("\t")
       Sequence(tokens.map(token => {
-        val tags = token.split('|')
+        val tags = token.split('\t')
+//        val tags = token.split('|')
         Token.put(tags.dropRight(1))
       }))
     })
 
     val testRDDwithLabel: RDD[Sequence] = sc.textFile(testFile).filter(_.nonEmpty).map(sentence => {
+//      val tokens = sentence.split("\n")
       val tokens = sentence.split("\t")
       Sequence(tokens.map(token => {
-        val tags = token.split('|')
+        val tags = token.split('\t')
+//        val tags = token.split('|')
         Token.put(tags.last, tags.dropRight(1))
       }))
     })
@@ -68,15 +76,16 @@ object CRFFromRawFile {
     .map(_._2)
     res.repartition(1).saveAsTextFile(resultFile)
 
-//    val score = results
-//      .zipWithIndex()
-//      .map(_.swap)
-//      .join(testRDDwithLabel.zipWithIndex().map(_.swap))
-//      .map(_._2)
-//      .map(x => x._1.compare(x._2))
-//      .reduce(_ + _)
-//    val total = testRDDWithoutLabel.map(_.toArray.length).reduce(_ + _)
-//    println(s"Prediction Accuracy: $score / $total")
+    //评估准确率
+    val score = results
+      .zipWithIndex()
+      .map(_.swap)
+      .join(testRDDwithLabel.zipWithIndex().map(_.swap))
+      .map(_._2)
+      .map(x => x._1.compare(x._2))
+      .reduce(_ + _)
+    val total = testRDDWithoutLabel.map(_.toArray.length).reduce(_ + _)
+    println(s"Prediction Accuracy: $score / $total")
 
     sc.stop()
   }

@@ -42,15 +42,25 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.scalanlp</groupId>
             <artifactId>breeze_2.11</artifactId>
             <version>0.11.2</version>
+        </dependency>-->
+        <!--<dependency>
+            <groupId>org.scalanlp</groupId>
+            <artifactId>breeze-natives_2.11</artifactId>
+            <version>0.11.2</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.scalanlp</groupId>
+            <artifactId>breeze_2.11</artifactId>
+            <version>0.13.2</version>
         </dependency>
         <dependency>
             <groupId>org.scalanlp</groupId>
             <artifactId>breeze-natives_2.11</artifactId>
-            <version>0.11.2</version>
+            <version>0.13.2</version>
         </dependency>
 
         <dependency>
@@ -78,8 +88,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
